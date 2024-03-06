@@ -34,7 +34,9 @@ pipeline {
         stage('Sending Email Notification') {
             steps {
                 echo 'Sending email notification...'
-                // Tambahkan perintah untuk mengirim email notifikasi di sini
+                emailext body: 'Build is complete.\n\nLogin: Success\nChecking UI: Success\nAll Tabs Work Properly: Success\nPerformance Test: Success\nLogout Apps: Success',
+                         subject: 'Build Notification',
+                         to: 'agilkrisna01@gmail.com'
             }
         }
     }
