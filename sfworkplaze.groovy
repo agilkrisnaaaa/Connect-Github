@@ -1,39 +1,40 @@
 pipeline {
     agent any
     stages {
-        stage('Login SFWorkplaze') {
+        stage('Login SFWorkplace') {
             steps {
-                echo 'Checking out code from repository...'
-                // Tambahkan perintah untuk checkout kode dari repository di sini
+                echo 'Logging in to SFWorkplace...'
+                // Tambahkan perintah untuk login ke SFWorkplace di sini
             }
         }
-        stage('Cheking UI') {
+        stage('Checking UI') {
             steps {
-                echo 'Building the project...'
-                // Tambahkan perintah untuk build proyek di sini
+                echo 'Checking UI...'
+                // Tambahkan perintah untuk memeriksa UI di sini
             }
         }
-        stage('All Tab Work Properly') {
+        stage('All Tabs Work Properly') {
             steps {
-                echo 'Running tests...'
-                // Tambahkan perintah untuk menjalankan test di sini
+                echo 'Checking all tabs...'
+                // Tambahkan perintah untuk memastikan semua tab berfungsi dengan baik di sini
             }
         }
         stage('Performance Test') {
             steps {
-                echo 'Deploying the application...'
-                // Tambahkan perintah untuk deployment di sini
+                echo 'Running performance tests...'
+                // Tambahkan perintah untuk melakukan uji kinerja di sini
             }
         }
-        stage('Log out Apps') {
+        stage('Logout Apps') {
             steps {
-                echo 'Notifying team about deployment...'
-                // Tambahkan perintah untuk memberi notifikasi tim tentang deployment di sini
+                echo 'Logging out from SFWorkplace...'
+                // Tambahkan perintah untuk logout dari SFWorkplace di sini
             }
+        }
         stage('Sending Email Notification') {
             steps {
-                echo 'Notifying team about deployment...'
-                // Tambahkan perintah untuk memberi notifikasi tim tentang deployment di sini
+                echo 'Sending email notification...'
+                // Tambahkan perintah untuk mengirim email notifikasi di sini
             }
         }
     }
