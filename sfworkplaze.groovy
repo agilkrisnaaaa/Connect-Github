@@ -1,35 +1,34 @@
 pipeline {
     agent any
     stages {
-        stage("Open URL") {
+        stage('Checkout') {
             steps {
-                echo "Opening URL"
-                // Membuka URL www.sf7qa.dataon.com
-                sh 'open http://www.sf7qa.dataon.com'
+                echo 'Checking out code from repository...'
+                // Tambahkan perintah untuk checkout kode dari repository di sini
             }
         }
-        stage("Login") {
+        stage('Build') {
             steps {
-                echo "Logging in"
-                // Tambahkan perintah untuk login di sini
+                echo 'Building the project...'
+                // Tambahkan perintah untuk build proyek di sini
             }
         }
-        stage("Record Time") {
+        stage('Test') {
             steps {
-                echo "Recording time"
-                // Tambahkan perintah untuk merekam waktu di sini
+                echo 'Running tests...'
+                // Tambahkan perintah untuk menjalankan test di sini
             }
         }
-        stage("Timesheet Request") {
+        stage('Deploy') {
             steps {
-                echo "Making timesheet request"
-                // Tambahkan perintah untuk membuat permintaan timesheet di sini
+                echo 'Deploying the application...'
+                // Tambahkan perintah untuk deployment di sini
             }
         }
-        stage("Logout") {
+        stage('Notify') {
             steps {
-                echo "Logging out"
-                // Tambahkan perintah untuk logout di sini
+                echo 'Notifying team about deployment...'
+                // Tambahkan perintah untuk memberi notifikasi tim tentang deployment di sini
             }
         }
     }
